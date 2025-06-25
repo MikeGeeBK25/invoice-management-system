@@ -1,0 +1,33 @@
+{
+  "name": "invoice-management-system",
+  "version": "1.0.0",
+  "description": "Enterprise-grade invoice management system with React frontend, Node.js backend, PostgreSQL database, approval workflows, and AI-powered data extraction",
+  "scripts": {
+    "dev": "concurrently \"npm run server:dev\" \"npm run client:dev\"",
+    "server:dev": "cd backend && npm run dev",
+    "client:dev": "cd frontend && npm run dev",
+    "build": "npm run frontend:build && npm run server:build",
+    "client:build": "cd frontend && npm run build",
+    "server:build": "cd backend && npm run build",
+    "start": "cd backend && npm start",
+    "test": "npm run server:test && npm run client:test",
+    "server:test": "cd backend && npm test",
+    "client:test": "cd frontend && npm test",
+    "lint": "npm run server:lint && npm run client:lint",
+    "server:lint": "cd backend && npm run lint",
+    "client:lint": "cd frontend && npm run lint",
+    "typecheck": "npm run server:typecheck && npm run client:typecheck",
+    "server:typecheck": "cd backend && npm run typecheck",
+    "client:typecheck": "cd frontend && npm run typecheck",
+    "db:migrate": "cd backend && npm run db:migrate",
+    "db:seed": "cd backend && npm run db:seed",
+    "db:reset": "cd backend && npm run db:reset"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "workspaces": [
+    "backend",
+    "frontend"
+  ]
+}
